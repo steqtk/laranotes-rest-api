@@ -1,0 +1,6 @@
+- composer install
+- configure DB connection in .env
+- php artisan migrate
+- php artisan key:generate
+- php artisan jwt:secret
+- use Postman collection for test

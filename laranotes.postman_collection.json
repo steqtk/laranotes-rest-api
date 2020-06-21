@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "dcdfd4c8-a58b-4c8a-b021-792d26cf9962",
+		"name": "laranotes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://laranotes.loc/api/auth/register?name=test&password=password&email=a@a.aa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://laranotes.loc/api/auth/register?name=test&password=password&email=a@a.aa",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						},
+						{
+							"key": "email",
+							"value": "a@a.aa"
+						}
+					]
+				},
+				"description": "registration request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://laranotes.loc/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "omurray@example.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "passwordd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laranotes.loc/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@tes.me",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "testtest",
+							"disabled": true
+						}
+					]
+				},
+				"description": "login request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://laranotes.loc/api/auth/me",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhbm90ZXMubG9jXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkyNzE2MDkzLCJleHAiOjE1OTI3MTk2OTMsIm5iZiI6MTU5MjcxNjA5MywianRpIjoicEJobk9HckRONmNYUHBaMSIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.N3MInnf5qEpqb3UaiCOyzfNuQZ7geMRIKr6Kvm9fiCc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhbm90ZXMubG9jXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkyNjM2NzUxLCJleHAiOjE1OTI2NDAzNTEsIm5iZiI6MTU5MjYzNjc1MSwianRpIjoiQ2VQaDVaS2Y5VnhoUjdCMSIsInN1YiI6MjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.OER0KR5qMHLb4nKL-aTfzsSHyy-g30iT1wHy1CXR4UU",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "kakakak",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laranotes.loc/api/auth/me",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				},
+				"description": "show info about authenticated user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://laranotes.loc/api/notes/5",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhbm90ZXMubG9jXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkyNzE2MDkzLCJleHAiOjE1OTI3MTk2OTMsIm5iZiI6MTU5MjcxNjA5MywianRpIjoicEJobk9HckRONmNYUHBaMSIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.N3MInnf5qEpqb3UaiCOyzfNuQZ7geMRIKr6Kvm9fiCc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://laranotes.loc/api/notes/5",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"notes",
+						"5"
+					]
+				},
+				"description": "pagination or show a single note"
+			},
+			"response": []
+		},
+		{
+			"name": "http://laranotes.loc/api/notes/create?title=testkfkfkfkfkf&content=asdwqewqewdsadasdadsfsdfsdfsdfsdfsdasd",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhbm90ZXMubG9jXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkyNzE2MDkzLCJleHAiOjE1OTI3MTk2OTMsIm5iZiI6MTU5MjcxNjA5MywianRpIjoicEJobk9HckRONmNYUHBaMSIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.N3MInnf5qEpqb3UaiCOyzfNuQZ7geMRIKr6Kvm9fiCc",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://laranotes.loc/api/notes/create?title=testkfkfkfkfkf&content=asdwqewqewdsadasdadsfsdfsdfsdfsdfsdasd",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"notes",
+						"create"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "testkfkfkfkfkf"
+						},
+						{
+							"key": "content",
+							"value": "asdwqewqewdsadasdadsfsdfsdfsdfsdfsdasd"
+						}
+					]
+				},
+				"description": "store a new note"
+			},
+			"response": []
+		},
+		{
+			"name": "http://laranotes.loc/api/notes/file/10",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhbm90ZXMubG9jXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkyNzE2MDkzLCJleHAiOjE1OTI3MTk2OTMsIm5iZiI6MTU5MjcxNjA5MywianRpIjoicEJobk9HckRONmNYUHBaMSIsInN1YiI6MywicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.N3MInnf5qEpqb3UaiCOyzfNuQZ7geMRIKr6Kvm9fiCc",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_method",
+						"value": "PUT",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/steq/www/sites/crm-obi-new/database/seeds/UserSeed.php"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://laranotes.loc/api/notes/file/10",
+					"protocol": "http",
+					"host": [
+						"laranotes",
+						"loc"
+					],
+					"path": [
+						"api",
+						"notes",
+						"file",
+						"10"
+					]
+				},
+				"description": "attach file to custom note"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
